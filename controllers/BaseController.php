@@ -32,7 +32,7 @@ class BaseController {
               break;
           default:
               http_response_code(405);
-              echo json_encode("Método não implementado.");
+              echo json_encode("Método não Implementado.");
       }
     }
 
