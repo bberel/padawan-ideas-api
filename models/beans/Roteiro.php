@@ -64,5 +64,4 @@ class Roteiro {
   public function setTimeId($time_id) {
     $this->time_id = $time_id;
   }
-
 }

@@ -56,5 +56,4 @@ class RoteiroDAO implements DAOInterface {
     $sql = "DELETE FROM roteiro WHERE id = ". $id;
     return $this->conexao->query($sql);
   }
-
 }
