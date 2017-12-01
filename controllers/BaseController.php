@@ -25,7 +25,7 @@ class BaseController {
               $this->save();
               break;
           case "PUT":
-
+              $this->update();
               break;
           case "DELETE":
               $this->delete();
@@ -87,6 +87,34 @@ class BaseController {
       }
 
       $result = $this->DAO->save($model);
+      if($result == null){
+         http_response_code(500);
+      } else {
+         http_response_code(201);
+      }
+      echo json_encode($result);
+    }
+
+    protected function update() {
+      $json = file_get_contents("php://input");
+      $dados = json_decode($json, true);
+
+      $id = $_GET["id"];
+      $id = (int)$id;
+      if(empty($id)){
+        http_response_code(404);
+        echo json_encode("É necessário informar um id válido.");
+        return;
+      }
+
+      $model = new $this->modelBean();
+      $object = $this->DAO->getById($id);
+      $model->set($object);
+
+      $model->setUpdate($dados);
+
+      $result = $this->DAO->update($model, $id);
+
       if($result == null){
          http_response_code(500);
       } else {

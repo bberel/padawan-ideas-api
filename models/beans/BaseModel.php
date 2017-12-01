@@ -5,6 +5,14 @@ class BaseModel {
         foreach ($data AS $key => $value) $this->{$key} = $value;
       }
     
+      public function setUpdate($data) {
+        foreach ($data as $key => $value) {
+          if(!is_null($data[$key])) {
+             $this->{$key} = $value;
+          }
+        }
+      }
+
       public function check($required) {
         $properties = array();
         foreach($required as $field) {
