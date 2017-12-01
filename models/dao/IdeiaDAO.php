@@ -22,12 +22,20 @@ class IdeiaDAO implements DAOInterface {
     }
 
     public function getById($id){
-
+        $sql = "SELECT * FROM ideia WHERE id = ". $id;
+        $result = $this->conexao->query($sql);
+        if($result->num_rows == 0) {
+            return null;
+        }else{
+            return $result->fetch_assoc();
+        }
     }
+
     public function save($object){
-
+        
     }
-    public function update($object){
+
+    public function update($object, $id ){
 
     }
 
