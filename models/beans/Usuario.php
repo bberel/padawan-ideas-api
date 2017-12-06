@@ -4,13 +4,13 @@ require "models/beans/BaseModel.php";
 
 class Usuario extends BaseModel{
 
-  private $id;
-  private $nome;
-  private $email;
-  private $link_linkedin;
-  private $celular;
-  private $nick;
-  private $senha;
+  protected $id;
+  protected $nome;
+  protected $email;
+  protected $link_linkedin;
+  protected $celular;
+  protected $nick;
+  protected $senha;
 
   public function getId() {
     return $this->id;
