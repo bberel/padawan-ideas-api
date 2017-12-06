@@ -33,6 +33,7 @@ class UsuarioDAO implements DAOInterface {
   }
 
   public function save($object) {
+    
     $sql = "INSERT INTO usuario (nome, email, link_linkedin, celular, nick, senha) VALUES (
       '".$object->getNome()."','".$object->getEmail()."','".$object->getLinkedin()."',
       '".$object->getCelular()."', '".$object->getNick()."','".$object->getSenha()."')";
@@ -49,11 +50,24 @@ class UsuarioDAO implements DAOInterface {
   }
 
   public function update($object, $id) {
+    $sql = "UPDATE usuario SET "
+            ."nome = '".$object->getNome()."', "
+            ."email = '".$object->getEmail()."', "
+            ."link_linkedin = '".$object->getLinkedin()."', "
+            ."celular = '".$object->getCelular()."', "
+            ."nick = '".$object->getNick()."', "
+            ."senha = '".$object->getSenha()."' WHERE id = $id";
 
+  $resultado = $this->conexao->query($sql);
+    if(!$resultado){
+      return null;
+    } else {
+    return $this->getById($id);
+    }
   }
 
   public function delete($id) {
-
+    
   }
 
 }
