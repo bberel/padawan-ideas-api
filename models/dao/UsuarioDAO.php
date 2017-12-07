@@ -67,7 +67,8 @@ class UsuarioDAO implements DAOInterface {
   }
 
   public function delete($id) {
-    
+    $sql = "DELETE FROM usuario WHERE id = ". $id;
+    return $this->conexao->query($sql);
   }
 
 }
