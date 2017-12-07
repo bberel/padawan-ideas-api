@@ -72,4 +72,19 @@ class UsuarioDAO implements DAOInterface {
     return $this->conexao->query($sql);
   }
 
+  public function model() {
+    $data = new stdClass();
+    $data->nome = 'Usuário';
+    $data->endpoint = 'https://google.com';
+
+    $recurso = new stdClass();
+    $recurso->verbo = 'POST';
+    $recurso->campos = [
+      array('campo' => 'nome', 'type' => 'string')
+    ];
+    
+    $data->recurso = $recurso;
+    return $data;
+  }
+
 }

@@ -31,8 +31,8 @@ class BaseController {
               $this->delete();
               break;
           case "OPTIONS":
-              //$this->options();  
-            echo json_encode("Metodo OPTIONS nao Implementado.");
+              $this->options();  
+            // echo json_encode("Metodo OPTIONS nao Implementado.");
               break;
           case "PATCH":
               echo json_encode("Metodo PATCH nao Implementado.");
@@ -132,7 +132,8 @@ class BaseController {
     }
 
     protected function options(){
-      echo json_encode("Options OK.");
+      $data = $this->DAO->model();
+      echo json_encode($data);
     }
 
     protected function delete() {
