@@ -12,8 +12,9 @@
 | PATCH | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza alguns campos por ID   |
 | OPTIONS | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra as operações que o recursos pode realizar |
 
+# Teste API hospedada em nosso servidor Heroku.
 
-# Testando a API
+# Testando a API com XAMPP ou Webservice de sua preferência
 
   1. Clone este repositório, adicione em sua pasta `htdocs`, caso esteja utilizando o Apache (Recomendados que use o XAMPP).
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
