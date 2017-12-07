@@ -57,7 +57,8 @@ class IdeiaDAO implements DAOInterface {
 
     public function delete($id) {
         $sql = "DELETE FROM ideia WHERE id = ". $id;
-        return $this->conexao->query($sql);
+        return $this->conexao->
+        query($sql);
     }
 }
 
