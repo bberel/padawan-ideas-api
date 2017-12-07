@@ -23,7 +23,7 @@
 
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`, utilizando o verbo `GET`.
 
-```json 
+```json
   {
     "id": "1",
     "nome": "Maria Rita da Rocha",
@@ -36,12 +36,11 @@
 ```
 
 # Exemplo - POST
-  
+
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `POST`.
 
-```json 
+```json
   {
-    "id": "1",
     "nome": "Maria Rita da Rocha",
     "email": "mariarita@gmail.com",
     "link_linkedin": "Não possui",
@@ -52,12 +51,11 @@
 ```
 
 # Exemplo - PUT
-  
-  Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia`, utilizando o verbo `PUT`.
+
+  Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia/1`, utilizando o verbo `PUT`.
 
 ```json
   {
-    "id": "1",
     "nome": "Econimize água",
     "descricao": "Equipamento residencial que auxilia na econmia de água.",
     "data_criacao": "0000-00-00",
@@ -76,10 +74,10 @@
 ```
 
 # Exemplo - OPTIONS
-  
+
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `OPTIONS`.
 
-```json 
+```json
   {
     "nome": "Usuario",
     "endpoint": "http://localhost:8080/padawan-ideas-api/usuario",
@@ -90,27 +88,32 @@
                 {
                     "field": "nome",
                     "type": "string",
-                    "required": "true"
+                    "required": "true",
+                    "max_length": 100
                 },
                 {
                     "field": "email",
                     "type": "string",
-                    "required": "true"
+                    "required": "true",
+                    "max_length": 100
                 },
                 {
                     "field": "link_linkedin",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 200
                 },
                 {
                     "field": "celular",
                     "type": "string",
-                    "required": "true"
+                    "required": "true",
+                    "max_length": 13
                 },
                 {
                     "field": "senha",
                     "type": "string",
-                    "required": "true"
+                    "required": "true",
+                    "max_length": 20
                 }
             ]
         },
@@ -120,7 +123,7 @@
                 {
                     "field": "id",
                     "type": "int",
-                    "required": "true"
+                    "required": "false"
                 }
             ]
         },
@@ -128,34 +131,34 @@
             "action": "PUT",
             "fields": [
                 {
-                    "field": "id",
-                    "type": "int",
-                    "required": "true"
-                },
-                {
                     "field": "nome",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 100
                 },
                 {
                     "field": "email",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 100
                 },
                 {
                     "field": "link_linkedin",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 200
                 },
                 {
                     "field": "celular",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 13
                 },
                 {
                     "field": "senha",
                     "type": "string",
-                    "required": "false"
+                    "required": "false",
+                    "max_length": 20
                 }
             ]
         }
