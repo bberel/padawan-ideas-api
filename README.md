@@ -15,7 +15,7 @@
 # Teste API hospedada em nosso servidor Heroku.
 
   Opção 1: [Heroku](https://padaua.herokuapp.com)<br>
-  Opção 2: [https://padaua.herokuapp.com/roteiro](https://padaua.herokuapp.com)
+  Opção 2: [https://padaua.herokuapp.com](https://padaua.herokuapp.com)
 
 # Testando a API com XAMPP ou Webservice de sua preferência
 
