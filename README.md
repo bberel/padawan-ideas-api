@@ -37,7 +37,7 @@
 
 # Exemplo, requisitando usuário por ID
 
-  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`, utilizando o verbo `GET`.
 
 ```json 
   {
@@ -49,6 +49,94 @@
     "nick": "rita_maravilhosa",
     "senha": "anaclara"
   }
+```
+
+# Usando método OPTIONS nos endpoints
+  
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `OPTIONS`.
+
+```json 
+  {
+    "nome": "Usuario",
+    "endpoint": "http://localhost:8080/padawan-ideas-api/usuario",
+    "recursos": [
+        {
+            "action": "POST",
+            "fields": [
+                {
+                    "field": "nome",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "email",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "link_linkedin",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "celular",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "senha",
+                    "type": "string",
+                    "required": "true"
+                }
+            ]
+        },
+        {
+            "action": "GET",
+            "fields": [
+                {
+                    "field": "id",
+                    "type": "int",
+                    "required": "true"
+                }
+            ]
+        },
+        {
+            "action": "PUT",
+            "fields": [
+                {
+                    "field": "id",
+                    "type": "int",
+                    "required": "true"
+                },
+                {
+                    "field": "nome",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "email",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "link_linkedin",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "celular",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "senha",
+                    "type": "string",
+                    "required": "false"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 
