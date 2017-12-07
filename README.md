@@ -8,7 +8,8 @@
 | GET   | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra todos |  
 | GET   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Mostra por ID |
 | POST  | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Cria um novo registro  |
-| PUT   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza todos os campo por ID |
+| PUT   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza todos os campos por ID |
+| PATCH | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza alguns campos por ID   |
 # License
 
 MIT License
