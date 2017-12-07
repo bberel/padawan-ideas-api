@@ -53,7 +53,15 @@
 
 # Exemplo - PUT
   
- Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/roteiro`, utilizando o verbo `PUT`.
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/metodologia`, utilizando o verbo `PUT`.
+
+```json
+  {
+        "id": "1",
+        "nome": "SCRUM",
+        "descricao": "A metodologia Scrum utiliza princípios ágeis para gerenciar o\nprocesso de desenvolvimento de software nas equipes desenvolvedoras. Abstraindo diversos aspectos documentais do processo\nde desenvolvimento tradicional, o Scrum oferece a possibilidade de auto-gerenciamento por parte de seus times"
+    }
+```
 
 # Exemplo - OPTIONS
   
