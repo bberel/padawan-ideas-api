@@ -21,7 +21,7 @@ class UsuarioDAO implements DAOInterface {
         return $resultado->fetch_all(MYSQLI_ASSOC);
     }
   }
-  
+
 
   public function getById($id) {
     $sql = "SELECT * FROM usuario WHERE id = ". $id;
@@ -34,20 +34,20 @@ class UsuarioDAO implements DAOInterface {
   }
 
   public function save($object) {
-    
+
     $sql = "INSERT INTO usuario (nome, email, link_linkedin, celular, nick, senha) VALUES (
       '".$object->getNome()."','".$object->getEmail()."','".$object->getLinkedin()."',
       '".$object->getCelular()."', '".$object->getNick()."','".$object->getSenha()."')";
-  
+
     $resultado = $this->conexao->query($sql);
-  
+
     if(!$resultado){
       return null;
     } else {
       $id = $this->conexao->insert_id;
       return $this->getById($id);
     }
-  
+
   }
 
   public function update($object, $id) {
@@ -87,16 +87,16 @@ class UsuarioDAO implements DAOInterface {
             array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false'),
             array('field' => 'celular', 'type' => 'string', 'required' => 'true'),
             array('field' => 'senha', 'type' => 'string', 'required' => 'true')
-          ] 
+          ]
           ),
       array('verbo' => 'GET',
         'campos' =>
           [
-            array('campo' => 'id', 'type' => 'int','obrigatorio' => 'sim'), 
-          ] 
+            array('campo' => 'id', 'type' => 'int','obrigatorio' => 'sim'),
+          ]
         )
       ];
-    
+
     $data->recursos = $recursos;
     return $data;
   }
