@@ -89,12 +89,24 @@ class UsuarioDAO implements DAOInterface {
             array('field' => 'senha', 'type' => 'string', 'required' => 'true')
           ] 
           ),
-      array('verbo' => 'GET',
-        'campos' =>
+      array('action' => 'GET',
+        'fields' =>
           [
-            array('campo' => 'id', 'type' => 'int','obrigatorio' => 'sim'), 
+            array('field' => 'id', 'type' => 'int','required' => 'false'), 
           ] 
-        )
+          ),
+      array('action' => 'PUT',
+        'fields' =>
+          [
+            array('field' => 'id', 'type' => 'int','required' => 'true'), 
+            array('field' => 'nome', 'type' => 'string','required' => 'false'),
+            array('field' => 'email', 'type' => 'string','required' => 'false'),
+            array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false'),
+            array('field' => 'celular', 'type' => 'string', 'required' => 'false'),
+            array('field' => 'senha', 'type' => 'string', 'required' => 'false')
+           
+          ] 
+          )
       ];
     
     $data->recursos = $recursos;
