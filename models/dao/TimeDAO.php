@@ -53,7 +53,7 @@ class TimeDAO implements DAOInterface {
 
         $sql = "UPDATE time SET nome_time = '".$nome."', data_criacao = '".$data."', descricao = '".$descricao."' WHERE id = '".$id."';";
         $resultado = $this->conexao->query($sql);
-        
+
         if(!$resultado){
             return null;
         } else {
@@ -68,18 +68,37 @@ class TimeDAO implements DAOInterface {
 
 
     public function model() {
-        $data = new stdClass();
-        $data->nome = 'Time';
-        $data->endpoint = 'http://localhost:8080/padawan-ideas-api/time';
-    
-        $recurso = new stdClass();
-        
-        $recurso->verboP = 'POST';
-        $recurso->campos = [
-          array('campo' => 'nome_time', 'type' => 'string')
-        ];
-        
-        $data->recurso = $recurso;
-        return $data;
-      }
+      $data = new stdClass();
+      $data->nome = 'Time';
+      $data->endpoint = 'http://localhost:8080/padawan-ideas-api/time';
+
+      $recursos = new stdClass();
+      $recursos = [
+        array('action' => 'POST',
+          'fields' =>
+            [
+              array('field' => 'nome_time', 'type' => 'string', 'required' => 'true', 'max_length' => 100),
+              array('field' => 'data_criacao', 'type' => 'date', 'required' => 'true'),
+              array('field' => 'descricao', 'type' => 'string', 'required' => 'true', 'max_length' => 500)
+            ]
+        ),
+        array('action' => 'GET',
+          'fields' =>
+            [
+              array('field' => 'id', 'type' => 'int', 'required' => 'false'),
+            ]
+        ),
+        array('action' => 'PUT',
+          'fields' =>
+            [
+              array('field' => 'nome_time', 'type' => 'string', 'required' => 'false', 'max_length' => 100),
+              array('field' => 'data_criacao', 'type' => 'date', 'required' => 'false'),
+              array('field' => 'descricao', 'type' => 'string', 'required' => 'false', 'max_length' => 500)
+            ]
+        ),
+      ];
+
+      $data->recursos = $recursos;
+      return $data;
+    }
 }
