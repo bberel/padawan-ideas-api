@@ -1,6 +1,34 @@
 # padawan-ideas-api
 
-É uma RESTFul API feita em PHP, com ela é possivel..
+É uma RESTFul API, desenvolvida por ![David Camurça](https://github.com/davidscamurca), ![Jerlilson Silva](https://github.com/Jerlilson), ![Renata Nunes](https://github.com/Renata-SN), ![Thiago Vinhote](https://github.com/thiagovinhote), implementada com PHP, utilizda como projeto final para a disciplina de Arquitetura de Software, ministrada pelo Professor ![Eder Franco](https://github.com/ederfranco23), no curso de Engenharia de Software 2017/2 da Faculdade FUCAPI.
+
+# Documentação
+| Verbo | Caminho/Recurso | Ação |
+| ----- | --------------- |------- |
+| GET   | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra todos |  
+| GET   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Mostra por ID |
+| POST  | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Cria um novo registro  |
+| PUT   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza todos os campos por ID |
+| PATCH | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza alguns campos por ID   |
+
+# Exemplo, requisitando usuário por ID
+
+  1. Clone este repositório, adicione em sua pasta htdocs, caso esteja utilizando o Apache.
+  2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
+  3. Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`
+
+```json 
+  {
+    "id": "1",
+    "nome": "Maria Rita da Rocha",
+    "email": "mariarita@gmail.com",
+    "link_linkedin": "Não possui",
+    "celular": "(97) 991751481",
+    "nick": "rita_maravilhosa",
+    "senha": "anaclara"
+  }
+  ```
+
 
 # License
 

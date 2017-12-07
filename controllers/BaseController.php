@@ -30,9 +30,17 @@ class BaseController {
           case "DELETE":
               $this->delete();
               break;
+          case "OPTIONS":
+              //$this->options();  
+            echo json_encode("Metodo OPTIONS nao Implementado.");
+              break;
+          case "PATCH":
+              echo json_encode("Metodo PATCH nao Implementado.");
+              break;              
+
           default:
               http_response_code(405);
-              echo json_encode("Método não Implementado.");
+              echo json_encode("Método nao Implementado.");
       }
     }
 
@@ -121,6 +129,10 @@ class BaseController {
          http_response_code(201);
       }
       echo json_encode($result);
+    }
+
+    protected function options(){
+      echo json_encode("Options OK.");
     }
 
     protected function delete() {
