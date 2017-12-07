@@ -26,7 +26,8 @@
     "celular": "(97) 991751481",
     "nick": "rita_maravilhosa",
     "senha": "anaclara"
-  }```
+  }
+  ```
 
 
 # License
