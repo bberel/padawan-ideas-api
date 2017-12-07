@@ -82,17 +82,27 @@ class UsuarioDAO implements DAOInterface {
       array('action' => 'POST',
         'fields' =>
           [
-            array('field' => 'nome', 'type' => 'string','required' => 'true'),
-            array('field' => 'email', 'type' => 'string','required' => 'true'),
-            array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false'),
-            array('field' => 'celular', 'type' => 'string', 'required' => 'true'),
-            array('field' => 'senha', 'type' => 'string', 'required' => 'true')
+            array('field' => 'nome', 'type' => 'string','required' => 'true', 'max_length' => 100),
+            array('field' => 'email', 'type' => 'string','required' => 'true', 'max_length' => 100),
+            array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false', 'max_length' => 200),
+            array('field' => 'celular', 'type' => 'string', 'required' => 'true', 'max_length' => 13),
+            array('field' => 'senha', 'type' => 'string', 'required' => 'true', 'max_length' => 20)
           ]
-          ),
-      array('verbo' => 'GET',
-        'campos' =>
+        ),
+      array('action' => 'GET',
+        'fields' =>
           [
-            array('campo' => 'id', 'type' => 'int','obrigatorio' => 'sim'),
+            array('field' => 'id', 'type' => 'int','required' => 'false'),
+          ]
+      ),
+      array('action' => 'PUT',
+        'fields' =>
+          [
+            array('field' => 'nome', 'type' => 'string','required' => 'false', 'max_length' => 100),
+            array('field' => 'email', 'type' => 'string','required' => 'false', 'max_length' => 100),
+            array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false', 'max_length' => 200),
+            array('field' => 'celular', 'type' => 'string', 'required' => 'false', 'max_length' => 13),
+            array('field' => 'senha', 'type' => 'string', 'required' => 'false', 'max_length' => 20)
           ]
         )
       ];
