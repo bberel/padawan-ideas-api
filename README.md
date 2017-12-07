@@ -3,10 +3,10 @@
 É uma RESTFul API, desenvolvida por ![David Camurça](https://github.com/davidscamurca), ![Jerlilson Silva](https://github.com/Jerlilson), ![Renata Nunes](https://github.com/Renata-SN), ![Thiago Vinhote](https://github.com/thiagovinhote), implementada com PHP, utilizda como projeto final para a disciplina de Arquitetura de Software, ministrada pelo Professor ![Eder Franco](https://github.com/ederfranco23), no curso de Engenharia de Software 2017/2 da Faculdade FUCAPI.
 
 # Documentação
-| Verbo | Path | Action|
-| ------| ---- |-------|
-| GET  | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra todos|  
-| GET  | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Mostra por ID |
+| Verbo | Caminho/Recurso | Ação |
+| ----- | --------------- |-------|
+| GET   | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra todos|  
+| GET   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Mostra por ID |
 
 # License
 
