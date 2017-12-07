@@ -64,7 +64,7 @@
 ```
 
 # Exemplo - PATCH
-  
+
   Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia/1`, utilizando o verbo `PATCH`.
 
 ```json
@@ -88,7 +88,7 @@
                 {
                     "field": "nome",
                     "type": "string",
-                    "required": "true",
+                    "required": true,
                     "max_length": 100
                 },
                 {
@@ -100,13 +100,13 @@
                 {
                     "field": "link_linkedin",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 200
                 },
                 {
                     "field": "celular",
                     "type": "string",
-                    "required": "true",
+                    "required": true,
                     "max_length": 13
                 },
                 {
@@ -123,7 +123,7 @@
                 {
                     "field": "id",
                     "type": "int",
-                    "required": "false"
+                    "required": false
                 }
             ]
         },
@@ -133,31 +133,31 @@
                 {
                     "field": "nome",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 100
                 },
                 {
                     "field": "email",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 100
                 },
                 {
                     "field": "link_linkedin",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 200
                 },
                 {
                     "field": "celular",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 13
                 },
                 {
                     "field": "senha",
                     "type": "string",
-                    "required": "false",
+                    "required": false,
                     "max_length": 20
                 }
             ]
