@@ -5,8 +5,8 @@
 # Documentação
 | Verbo | Path | Action|
 | ------| ---- |-------|
-| GET  | /ideia<br>/metodologia<br>/roteiro<br>/time<>/usuario | Mostra todos|  
-| Content Cell  | Content Cell  | Content Cell  |
+| GET  | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra todos|  
+| GET  | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Mostra por ID |
 
 # License
 
