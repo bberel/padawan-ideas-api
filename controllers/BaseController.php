@@ -31,10 +31,10 @@ class BaseController {
               $this->delete();
               break;
           case "OPTIONS":
-              echo json_encode("Método OPTIONS não Implementado.");
+              echo json_encode("Metodo OPTIONS não Implementado.");
               break;
           case "PATCH":
-              echo json_encode("Método PATCH não Implementado.");
+              echo json_encode("Metodo PATCH não Implementado.");
               break;              
 
           default:
