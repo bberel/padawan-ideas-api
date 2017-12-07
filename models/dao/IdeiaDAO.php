@@ -30,7 +30,7 @@ class IdeiaDAO implements DAOInterface {
             return $result->fetch_assoc();
         }
     }
-
+    
     public function save($object){
         $sql = "INSERT INTO ideia (nome, descricao, data_criacao, usuario_id) 
         VALUES ('".$object->getNome()."', '".$object->getDescricao()."', '".$object->getDataCriacao()."', '".$object->getUserId()."' )
@@ -56,8 +56,8 @@ class IdeiaDAO implements DAOInterface {
     }
 
     public function delete($id) {
-        // $sql = "DELETE FROM ideia WHERE id = ". $id;
-        // return $this->conexao->query($sql);
+        $sql = "DELETE FROM ideia WHERE id = ". $id;
+        return $this->conexao->query($sql);
     }
 }
 
