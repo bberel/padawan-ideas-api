@@ -65,6 +65,16 @@
   }
 ```
 
+# Exemplo - PATCH
+  
+  Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia/1`, utilizando o verbo `PATCH`.
+
+```json
+  {
+    "nome": "Econimize água"
+  }
+```
+
 # Exemplo - OPTIONS
   
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `OPTIONS`.
