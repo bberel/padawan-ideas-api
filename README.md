@@ -19,9 +19,9 @@
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
   3. URL inicial: `http://localhost:8080/padawan-ideas-api`
 
-# Exemplo, de POST usuário
-  
- Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/usuario`
+# Exemplo - GET
+
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`, utilizando o verbo `GET`.
 
 ```json 
   {
@@ -35,9 +35,9 @@
   }
 ```
 
-# Exemplo, requisitando usuário por ID
-
-  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`
+# Exemplo - POST
+  
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `POST`.
 
 ```json 
   {
@@ -49,6 +49,118 @@
     "nick": "rita_maravilhosa",
     "senha": "anaclara"
   }
+```
+
+# Exemplo - PUT
+  
+  Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia`, utilizando o verbo `PUT`.
+
+```json
+  {
+    "id": "1",
+    "nome": "Econimize água",
+    "descricao": "Equipamento residencial que auxilia na econmia de água.",
+    "data_criacao": "0000-00-00",
+    "usuario_id": "1"
+  }
+```
+
+# Exemplo - PATCH
+  
+  Para fazer a requisição use: `localhost:8080/padawan-ideas-api/ideia/1`, utilizando o verbo `PATCH`.
+
+```json
+  {
+    "nome": "Econimize água"
+  }
+```
+
+# Exemplo - OPTIONS
+  
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `OPTIONS`.
+
+```json 
+  {
+    "nome": "Usuario",
+    "endpoint": "http://localhost:8080/padawan-ideas-api/usuario",
+    "recursos": [
+        {
+            "action": "POST",
+            "fields": [
+                {
+                    "field": "nome",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "email",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "link_linkedin",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "celular",
+                    "type": "string",
+                    "required": "true"
+                },
+                {
+                    "field": "senha",
+                    "type": "string",
+                    "required": "true"
+                }
+            ]
+        },
+        {
+            "action": "GET",
+            "fields": [
+                {
+                    "field": "id",
+                    "type": "int",
+                    "required": "true"
+                }
+            ]
+        },
+        {
+            "action": "PUT",
+            "fields": [
+                {
+                    "field": "id",
+                    "type": "int",
+                    "required": "true"
+                },
+                {
+                    "field": "nome",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "email",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "link_linkedin",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "celular",
+                    "type": "string",
+                    "required": "false"
+                },
+                {
+                    "field": "senha",
+                    "type": "string",
+                    "required": "false"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 
