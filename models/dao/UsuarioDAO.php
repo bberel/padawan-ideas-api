@@ -21,6 +21,7 @@ class UsuarioDAO implements DAOInterface {
         return $resultado->fetch_all(MYSQLI_ASSOC);
     }
   }
+  
 
   public function getById($id) {
     $sql = "SELECT * FROM usuario WHERE id = ". $id;

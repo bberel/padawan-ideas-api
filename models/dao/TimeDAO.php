@@ -46,8 +46,19 @@ class TimeDAO implements DAOInterface {
         }
     }
 
-    public function update($object){
-        //
+    public function update($object, $id){
+        $sql = "UPDATE time SET "
+        ."nome_time = '".$object->getNomeTime()."', "
+        ."data_criacao = '".$object->getDataCriacao()."', "
+        ."descricao = '".$object->getDescricao()."' WHERE id = $id";
+
+        $resultado = $this->conexao->query($sql);
+        
+        if(!$resultado){
+            return null;
+        } else {
+            return $this->getById($id);
+        }
     }
 
     public function delete($id){
