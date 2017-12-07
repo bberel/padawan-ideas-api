@@ -21,7 +21,7 @@
 
 # Exemplo, de POST usuário
   
- Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/usuario`
+ Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `POST`.
 
 ```json 
   {
