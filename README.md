@@ -15,7 +15,7 @@
 
   1. Clone este repositório, adicione em sua pasta htdocs, caso esteja utilizando o Apache.
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
-  3. Para fazer a requisição use: `localhost:8080/padawan-ideas-api/usuario/1`
+  3. Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`
 
 ```json 
   {
