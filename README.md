@@ -10,6 +10,7 @@
 | POST  | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Cria um novo registro  |
 | PUT   | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza todos os campos por ID |
 | PATCH | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza alguns campos por ID   |
+| OPTIONS | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra as operações que o recursos pode realizar |
 
 
 # Testando a API

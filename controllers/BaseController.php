@@ -34,7 +34,7 @@ class BaseController {
               $this->options();  
               break;
           case "PATCH":
-              echo json_encode("Metodo PATCH nao Implementado.");
+              $this->update();
               break;              
 
           default:

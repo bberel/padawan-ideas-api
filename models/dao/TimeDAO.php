@@ -35,7 +35,7 @@ class TimeDAO implements DAOInterface {
         $data = $object->getDataCriacao();
         $descricao = $object->getDescricao();
 
-        $sql = "INSERT INTO time(nome_time, data_criacao, descricao) VALUES('$nome', '$data', '$descricao');";
+        $sql = "INSERT INTO time(nome_time, data_criacao, descricao) VALUES('".$nome."', '".$data."', '".$descricao."');";
 
         $resultado = $this->conexao->query($sql);
         if(!$resultado){
@@ -47,11 +47,11 @@ class TimeDAO implements DAOInterface {
     }
 
     public function update($object, $id){
-        $sql = "UPDATE time SET "
-        ."nome_time = '".$object->getNomeTime()."', "
-        ."data_criacao = '".$object->getDataCriacao()."', "
-        ."descricao = '".$object->getDescricao()."' WHERE id = $id";
+        $nome = $object->getNomeTime();
+        $data = $object->getDataCriacao();
+        $descricao = $object->getDescricao();
 
+        $sql = "UPDATE time SET nome_time = '".$nome."', data_criacao = '".$data."', descricao = '".$descricao."' WHERE id = '".$id."';";
         $resultado = $this->conexao->query($sql);
         
         if(!$resultado){

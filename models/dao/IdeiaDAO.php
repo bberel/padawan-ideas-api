@@ -45,10 +45,11 @@ class IdeiaDAO implements DAOInterface {
         }
     }
 
-    public function update($object, $id ){
-        $sql = "UPDATE ideia SET nome = '".$object->getNome()."' , '".$object->getDescricao()."', '".$object->getDataCriacao()."' , '".$object->getUserId()."' WHERE id = $id";
+    public function update($object, $id){
+        $sql = "UPDATE ideia SET nome = '".$object->getNome()."', descricao = '".$object->getDescricao()."', data_criacao = '".$object->getDataCriacao()."', usuario_id = '".$object->getUserId()."' WHERE id = $id";
+        
         $result = $this->conexao->query($sql);
-        if($result){
+        if(!$result){
             return null;
         }else{
             return $this->getById($id);
