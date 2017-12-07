@@ -12,7 +12,7 @@
 | PATCH | /ideia/{id}<br>/metodologia/{id}<br>/roteiro/{id}<br>/time/{id}<br>/usuario/{id} | Atualiza alguns campos por ID   |
 | OPTIONS | /ideia<br>/metodologia<br>/roteiro<br>/time<br>/usuario | Mostra as operações que o recursos pode realizar |
 
-# Teste API hospedada em nosso servidor Heroku.
+# Teste a API hospedada em nosso servidor Heroku.
 
   Opção 1: [Heroku](https://padaua.herokuapp.com)<br>
   Opção 2: [https://padaua.herokuapp.com](https://padaua.herokuapp.com)
