@@ -5,8 +5,7 @@
 # Documentação
 | Verbo | Path | Action|
 | ------| ---- |-------|
-| GET  | /ideia 
-         /metodologia
+| GET  | /ideia<br>/metodologia
          /roteiro
          /time
          /usuario | Content Cell  |  
