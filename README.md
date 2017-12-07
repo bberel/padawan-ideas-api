@@ -15,7 +15,7 @@
 
 # Testando a API
 
-  1. Clone este repositório, adicione em sua pasta `htdocs`, caso esteja utilizando o Apache.
+  1. Clone este repositório, adicione em sua pasta `htdocs`, caso esteja utilizando o Apache (Recomendados que use o XAMPP).
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
   3. URL inicial: `http://localhost:8080/padawan-ideas-api`
 
