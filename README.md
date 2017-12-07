@@ -19,23 +19,7 @@
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
   3. URL inicial: `http://localhost:8080/padawan-ideas-api`
 
-# Exemplo, de POST usuário
-  
- Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `POST`.
-
-```json 
-  {
-    "id": "1",
-    "nome": "Maria Rita da Rocha",
-    "email": "mariarita@gmail.com",
-    "link_linkedin": "Não possui",
-    "celular": "(97) 991751481",
-    "nick": "rita_maravilhosa",
-    "senha": "anaclara"
-  }
-```
-
-# Exemplo, requisitando usuário por ID
+# Exemplo - GET
 
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario/1`, utilizando o verbo `GET`.
 
@@ -51,7 +35,27 @@
   }
 ```
 
-# Usando método OPTIONS nos endpoints
+# Exemplo - POST
+  
+  Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `POST`.
+
+```json 
+  {
+    "id": "1",
+    "nome": "Maria Rita da Rocha",
+    "email": "mariarita@gmail.com",
+    "link_linkedin": "Não possui",
+    "celular": "(97) 991751481",
+    "nick": "rita_maravilhosa",
+    "senha": "anaclara"
+  }
+```
+
+# Exemplo - PUT
+  
+ Para fazer o POST use: `http://localhost:8080/padawan-ideas-api/roteiro`, utilizando o verbo `PUT`.
+
+# Exemplo - OPTIONS
   
   Para fazer a requisição use: `http://localhost:8080/padawan-ideas-api/usuario`, utilizando o verbo `OPTIONS`.
 
