@@ -37,11 +37,11 @@ class Usuario extends BaseModel{
   }
 
   public function getLinkedin() {
-    return $this->linkedin;
+    return $this->link_linkedin;
   }
 
   public function setLinkedin($linkedin) {
-    $this->linkedin = $linkedin;
+    $this->link_linkedin = $link_linkedin;
   }
 
   public function getCelular() {
