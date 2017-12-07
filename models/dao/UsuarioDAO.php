@@ -74,16 +74,30 @@ class UsuarioDAO implements DAOInterface {
 
   public function model() {
     $data = new stdClass();
-    $data->nome = 'Usuário';
-    $data->endpoint = 'https://google.com';
+    $data->nome = 'Usuario';
+    $data->endpoint = 'http://localhost:8080/padawan-ideas-api/usuario';
 
-    $recurso = new stdClass();
-    $recurso->verbo = 'POST';
-    $recurso->campos = [
-      array('campo' => 'nome', 'type' => 'string')
-    ];
+    $recursos = new stdClass();
+    $recursos = [
+      array('action' => 'POST',
+        'fields' =>
+          [
+            array('field' => 'nome', 'type' => 'string','required' => 'true'),
+            array('field' => 'email', 'type' => 'string','required' => 'true'),
+            array('field' => 'link_linkedin', 'type' => 'string', 'required' => 'false'),
+            array('field' => 'celular', 'type' => 'string', 'required' => 'true'),
+            array('field' => 'senha', 'type' => 'string', 'required' => 'true')
+          ] 
+          ),
+      array('verbo' => 'GET',
+        'campos' =>
+          [
+            array('campo' => 'id', 'type' => 'int','obrigatorio' => 'sim'), 
+          ] 
+        )
+      ];
     
-    $data->recurso = $recurso;
+    $data->recursos = $recursos;
     return $data;
   }
 

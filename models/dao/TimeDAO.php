@@ -65,4 +65,21 @@ class TimeDAO implements DAOInterface {
         $sql = "DELETE FROM time WHERE id = ". $id;
         return $this->conexao->query($sql);
     }
+
+
+    public function model() {
+        $data = new stdClass();
+        $data->nome = 'Time';
+        $data->endpoint = 'http://localhost:8080/padawan-ideas-api/time';
+    
+        $recurso = new stdClass();
+        
+        $recurso->verboP = 'POST';
+        $recurso->campos = [
+          array('campo' => 'nome_time', 'type' => 'string')
+        ];
+        
+        $data->recurso = $recurso;
+        return $data;
+      }
 }

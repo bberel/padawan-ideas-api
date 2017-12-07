@@ -32,7 +32,6 @@ class BaseController {
               break;
           case "OPTIONS":
               $this->options();  
-            // echo json_encode("Metodo OPTIONS nao Implementado.");
               break;
           case "PATCH":
               echo json_encode("Metodo PATCH nao Implementado.");

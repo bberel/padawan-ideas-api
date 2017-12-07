@@ -7,7 +7,5 @@ interface DAOInterface {
   public function save($object);
   public function update($object, $id);
   public function delete($id);
-  //public function options();
-  //public function patch($id);
 
 }
