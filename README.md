@@ -5,7 +5,11 @@
 # Documentação
 | Verbo | Path | Action|
 | ------| ---- |-------|
-| Content Cell  | Content Cell  | Content Cell  |
+| GET  | /ideia 
+         /metodologia
+         /roteiro
+         /time
+         /usuario | Content Cell  |  
 | Content Cell  | Content Cell  | Content Cell  |
 
 # License
