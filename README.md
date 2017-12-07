@@ -2,6 +2,12 @@
 
 É uma RESTFul API, desenvolvida por ![David Camurça](https://github.com/davidscamurca), ![Jerlilson Silva](https://github.com/Jerlilson), ![Renata Nunes](https://github.com/Renata-SN), ![Thiago Vinhote](https://github.com/thiagovinhote), implementada com PHP, utilizda como projeto final para a disciplina de Arquitetura de Software, ministrada pelo Professor ![Eder Franco](https://github.com/ederfranco23), no curso de Engenharia de Software 2017/2 da Faculdade FUCAPI.
 
+# Documentação
+| Verbo | Path | Action|
+| ------| ---- |-------|
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+
 # License
 
 MIT License
