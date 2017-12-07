@@ -17,6 +17,17 @@
   2. Importe as tabelas do arquivo `DBPadaua.sql` para uma base de dados, recomendados que esteja utilizando o MySQL.
   3. Para fazer a requisição use: `localhost:8080/padawan-ideas-api/usuario/1`
 
+```json 
+  {
+    "id": "1",
+    "nome": "Maria Rita da Rocha",
+    "email": "mariarita@gmail.com",
+    "link_linkedin": "Não possui",
+    "celular": "(97) 991751481",
+    "nick": "rita_maravilhosa",
+    "senha": "anaclara"
+  }
+
 
 # License
 
